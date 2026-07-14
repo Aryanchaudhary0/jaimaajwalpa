@@ -94,7 +94,7 @@ function RouteLandingPage() {
             <div className="rounded-2xl border border-border bg-card p-6 md:p-8 shadow-luxe">
               <h2 className="font-display text-2xl font-semibold text-primary">Why book this with Jai Maa Jwalpa</h2>
               <ul className="mt-4 grid sm:grid-cols-2 gap-3 text-sm">
-                {r.highlights.map((h) => (
+                {r.highlights.map((h: string) => (
                   <li key={h} className="flex items-start gap-2">
                     <FaCheckCircle className="mt-1 text-emerald shrink-0" /> <span>{h}</span>
                   </li>
@@ -103,7 +103,7 @@ function RouteLandingPage() {
             </div>
 
             <div className="prose prose-slate max-w-none">
-              {r.body.map((p, i) => (
+              {r.body.map((p: string, i: number) => (
                 <p key={i} className="text-[15px] leading-relaxed text-foreground/85 mb-4">{p}</p>
               ))}
             </div>
