@@ -455,7 +455,7 @@ export const PACKAGES: Pkg[] = [
     incl: "Transport + hotel arrangements",
     slug: "kotdwar-to-char-dham-yatra",
   },
-] as const;
+];
 
 export const DESTINATIONS = [
   "Kedarnath", "Badrinath", "Gangotri", "Yamunotri", "Haridwar",
