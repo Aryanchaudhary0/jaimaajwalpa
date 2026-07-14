@@ -420,7 +420,8 @@ export const ROUTES: RouteLanding[] = [
   },
 ];
 
-export const PACKAGES = [
+type Pkg = { title: string; duration: string; price: string; covers: string; incl: string; slug: string; featured?: boolean };
+export const PACKAGES: Pkg[] = [
   {
     title: "Char Dham Yatra Tour Package",
     duration: "10 Days / 9 Nights",
