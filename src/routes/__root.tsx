@@ -90,17 +90,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Jai Maa Jwalpa Tour and Travel | Kotdwar Taxi & Char Dham Yatra" },
+      { title: "Jai Maa Jwalpa | Kotdwar Taxi & Char Dham Yatra" },
       {
         name: "description",
         content:
-          "Premium Kotdwar taxi service and Uttarakhand Char Dham Yatra packages. Sedan, Innova & luxury Tempo Traveller with experienced drivers. 4.9★ on Google.",
+          "Kotdwar taxi service & Char Dham Yatra packages. Sedan, Innova & Tempo Traveller. 4.9★ on Google.",
       },
       { name: "author", content: "Jai Maa Jwalpa Tour and Travel" },
       { name: "theme-color", content: "#1a2b6d" },
       { property: "og:site_name", content: "Jai Maa Jwalpa Tour and Travel" },
-      { property: "og:title", content: "Jai Maa Jwalpa Tour and Travel | Kotdwar Taxi & Char Dham" },
-      { property: "og:description", content: "Kotdwar-based tour operator. Char Dham packages from ₹19,500. Luxury Tempo Travellers, sedans & SUVs. 4.9★ on Google." },
+      { property: "og:title", content: "Jai Maa Jwalpa | Kotdwar Taxi & Char Dham" },
+      { property: "og:description", content: "Kotdwar tour operator. Char Dham from ₹19,500. Tempo Travellers, sedans & SUVs." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
