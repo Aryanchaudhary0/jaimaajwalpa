@@ -50,11 +50,11 @@ const REVIEW_JSONLD = {
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Jai Maa Jwalpa Tour and Travel | Kotdwar Taxi & Char Dham Yatra Packages" },
-      { name: "description", content: "Book Kotdwar taxi service and Uttarakhand Char Dham Yatra packages from a trusted local operator. Sedan, Innova & luxury Tempo Traveller. 4.9★ on Google." },
-      { property: "og:title", content: "Jai Maa Jwalpa Tour and Travel — Kotdwar Taxi & Char Dham" },
-      { property: "og:description", content: "Trusted Kotdwar tour operator. Char Dham from ₹19,500. Sedan, Innova & Tempo Traveller." },
-      { property: "og:url", content: "/" },
+      { title: "Kotdwar Taxi & Char Dham Yatra | Jai Maa Jwalpa" },
+      { name: "description", content: "Book Kotdwar taxi service & Char Dham Yatra packages. Sedan, Innova & Tempo Traveller. 4.9★ on Google." },
+      { property: "og:title", content: "Kotdwar Taxi & Char Dham Yatra | Jai Maa Jwalpa" },
+      { property: "og:description", content: "Trusted Kotdwar tour operator. Char Dham from ₹19,500." },
+      { property: "og:url", content: "https://jaimaajwalpa.lovable.app/" },
     ],
     links: [{ rel: "canonical", href: "/" }],
     scripts: [
