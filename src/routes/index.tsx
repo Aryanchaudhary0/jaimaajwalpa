@@ -56,7 +56,7 @@ export const Route = createFileRoute("/")({
       { property: "og:description", content: "Trusted Kotdwar tour operator. Char Dham from ₹19,500." },
       { property: "og:url", content: "https://jaimaajwalpa.lovable.app/" },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [{ rel: "canonical", href: "https://jaimaajwalpa.lovable.app/" }],
     scripts: [
       { type: "application/ld+json", children: JSON.stringify(FAQ_JSONLD) },
       { type: "application/ld+json", children: JSON.stringify(REVIEW_JSONLD) },
