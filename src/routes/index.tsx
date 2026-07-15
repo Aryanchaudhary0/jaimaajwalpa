@@ -50,13 +50,13 @@ const REVIEW_JSONLD = {
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Jai Maa Jwalpa Tour and Travel | Kotdwar Taxi & Char Dham Yatra Packages" },
-      { name: "description", content: "Book Kotdwar taxi service and Uttarakhand Char Dham Yatra packages from a trusted local operator. Sedan, Innova & luxury Tempo Traveller. 4.9★ on Google." },
-      { property: "og:title", content: "Jai Maa Jwalpa Tour and Travel — Kotdwar Taxi & Char Dham" },
-      { property: "og:description", content: "Trusted Kotdwar tour operator. Char Dham from ₹19,500. Sedan, Innova & Tempo Traveller." },
-      { property: "og:url", content: "/" },
+      { title: "Kotdwar Taxi & Char Dham Yatra | Jai Maa Jwalpa" },
+      { name: "description", content: "Book Kotdwar taxi service & Char Dham Yatra packages. Sedan, Innova & Tempo Traveller. 4.9★ on Google." },
+      { property: "og:title", content: "Kotdwar Taxi & Char Dham Yatra | Jai Maa Jwalpa" },
+      { property: "og:description", content: "Trusted Kotdwar tour operator. Char Dham from ₹19,500." },
+      { property: "og:url", content: "https://jaimaajwalpa.lovable.app/" },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [{ rel: "canonical", href: "https://jaimaajwalpa.lovable.app/" }],
     scripts: [
       { type: "application/ld+json", children: JSON.stringify(FAQ_JSONLD) },
       { type: "application/ld+json", children: JSON.stringify(REVIEW_JSONLD) },
@@ -100,7 +100,14 @@ function Hero() {
             className="absolute inset-0 transition-opacity duration-1000"
             style={{ opacity: i === k ? 0.45 : 0 }}
           >
-            <img src={s.img} alt={s.title} className="w-full h-full object-cover" />
+            <img
+              src={s.img}
+              alt={s.title}
+              width={1920}
+              height={1080}
+              {...(k === 0 ? { fetchPriority: "high" as const } : { loading: "lazy" as const })}
+              className="w-full h-full object-cover"
+            />
           </div>
         ))}
         <div className="absolute inset-0 bg-gradient-to-b from-primary/70 via-primary/40 to-primary/80" />

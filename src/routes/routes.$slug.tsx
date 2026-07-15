@@ -57,7 +57,7 @@ function RouteLandingPage() {
             <span>›</span>
             <Link to="/packages" className="hover:text-accent">Routes &amp; Packages</Link>
             <span>›</span>
-            <span className="text-white/70">{r.h1}</span>
+            <span className="text-white/90">{r.h1}</span>
           </nav>
           <h1 className="font-display text-3xl md:text-5xl lg:text-6xl font-semibold max-w-4xl leading-[1.05]">
             {r.h1}

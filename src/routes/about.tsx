@@ -6,7 +6,7 @@ export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "About Us | Jai Maa Jwalpa Tour and Travel — Kotdwar" },
-      { name: "description", content: "Jai Maa Jwalpa Tour and Travel is a trusted Kotdwar-based tour operator specialising in Char Dham Yatra, Kedarnath & Badrinath tours, and comfortable Uttarakhand taxi service." },
+      { name: "description", content: "Kotdwar-based tour operator for Char Dham Yatra, Kedarnath & Badrinath tours, and comfortable Uttarakhand taxi service." },
       { property: "og:title", content: "About — Jai Maa Jwalpa Tour and Travel" },
       { property: "og:description", content: "Trusted Kotdwar-based Char Dham & Uttarakhand tour operator." },
       { property: "og:url", content: "/about" },

@@ -12,7 +12,7 @@ const EXTRA = [
 export const Route = createFileRoute("/packages")({
   head: () => ({
     meta: [
-      { title: "Tour Packages | Char Dham, Do Dham, Kedarnath, Badrinath — Jai Maa Jwalpa" },
+      { title: "Tour Packages: Char Dham, Kedarnath, Badrinath | Kotdwar" },
       { name: "description", content: "Explore Char Dham, Do Dham, Kedarnath, Badrinath, Vaishno Devi, Ayodhya, Kathmandu and hill-station tour packages from Kotdwar." },
       { property: "og:title", content: "Tour Packages — Jai Maa Jwalpa" },
       { property: "og:description", content: "Uttarakhand tour packages from a trusted Kotdwar operator." },
