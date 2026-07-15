@@ -191,7 +191,7 @@ function TrustBar() {
 }
 
 function Services() {
-  const svcs = [
+  const svcs: { icon: typeof FaCarSide; title: string; body: string; badge?: string }[] = [
     { icon: FaCarSide, title: "Local Taxi", body: "Kotdwar city, Sidhbali, Kanvashram sightseeing" },
     { icon: FaRoute, title: "Outstation Taxi", body: "Delhi, Dehradun, Haridwar, Rishikesh, Pauri" },
     { icon: FaRoute, title: "Kotdwar ↔ Delhi Daily Service", body: "Daily scheduled shared & private cabs — both ways", badge: "Daily" },
