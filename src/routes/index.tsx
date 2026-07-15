@@ -332,8 +332,8 @@ const FLEET_CARDS = [
   { name: "Tempo Traveller — Interior", img: tempoInt.url, seats: "14 / 16 / 17+1", ac: "AC", luggage: "Push-back seats", best: "Long-distance comfort" },
   { name: "Sedan (Swift Dzire)", img: sedan.url, seats: "4", ac: "AC", luggage: "3 bags", best: "Kotdwar → Delhi / Dehradun / Pauri" },
   { name: "Force Tempo Traveller — Rear View", img: tempoRear.url, seats: "17+1", ac: "AC", luggage: "Emergency exit fitted", best: "Yatra circuits" },
-  { name: "Innova Crysta", img: "", seats: "6+1", ac: "AC", luggage: "4 bags", best: "Premium family travel", placeholder: true },
-  { name: "Maruti Ertiga", img: "", seats: "6+1", ac: "AC", luggage: "3 bags", best: "Small family / corporate", placeholder: true },
+  { name: "Innova Crysta", img: innova.url, seats: "6+1", ac: "AC", luggage: "4 bags", best: "Premium family travel" },
+  { name: "Maruti Ertiga", img: ertiga.url, seats: "6+1", ac: "AC", luggage: "3 bags", best: "Small family / corporate" },
 ];
 
 function Fleet() {
