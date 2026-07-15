@@ -3,6 +3,8 @@ import tempo1 from "@/assets/fleet-tempo-sedan.jpg.asset.json";
 import tempoRear from "@/assets/fleet-tempo-rear.jpg.asset.json";
 import tempoInt from "@/assets/fleet-tempo-interior.jpg.asset.json";
 import sedan from "@/assets/fleet-sedan-front.jpg.asset.json";
+import innova from "@/assets/fleet-innova.jpg.asset.json";
+import ertiga from "@/assets/fleet-ertiga.jpg.asset.json";
 import { waLink } from "@/data/site";
 import { FaWhatsapp } from "react-icons/fa";
 
@@ -11,8 +13,8 @@ const FLEET = [
   { name: "Tempo Traveller Interior", img: tempoInt.url, seats: "14/16/17+1", ac: "AC", best: "Push-back seat comfort" },
   { name: "Tempo Traveller — Rear", img: tempoRear.url, seats: "17+1", ac: "AC", best: "Yatra circuits" },
   { name: "Sedan — Swift Dzire", img: sedan.url, seats: "4", ac: "AC", best: "Kotdwar → Delhi/Dehradun/Pauri" },
-  { name: "Innova Crysta", img: "", seats: "6+1", ac: "AC", best: "Premium family travel" },
-  { name: "Maruti Ertiga", img: "", seats: "6+1", ac: "AC", best: "Small family / corporate" },
+  { name: "Innova Crysta", img: innova.url, seats: "6+1", ac: "AC", best: "Premium family travel" },
+  { name: "Maruti Ertiga", img: ertiga.url, seats: "6+1", ac: "AC", best: "Small family / corporate" },
   { name: "Tempo Traveller 14 Seater", img: "", seats: "14", ac: "AC", best: "Small group tours" },
   { name: "Tempo Traveller 16 Seater", img: "", seats: "16", ac: "AC", best: "Extended families" },
 ];

@@ -7,6 +7,8 @@ import tempo1 from "@/assets/fleet-tempo-sedan.jpg.asset.json";
 import tempoRear from "@/assets/fleet-tempo-rear.jpg.asset.json";
 import tempoInt from "@/assets/fleet-tempo-interior.jpg.asset.json";
 import sedan from "@/assets/fleet-sedan-front.jpg.asset.json";
+import innova from "@/assets/fleet-innova.jpg.asset.json";
+import ertiga from "@/assets/fleet-ertiga.jpg.asset.json";
 import {
   FaStar, FaWhatsapp, FaPhoneAlt, FaShieldAlt, FaClock, FaMapMarkedAlt, FaUserTie,
   FaCarSide, FaRoute, FaMountain, FaPrayingHands, FaCheckCircle, FaChevronDown,
@@ -189,9 +191,10 @@ function TrustBar() {
 }
 
 function Services() {
-  const svcs = [
+  const svcs: { icon: typeof FaCarSide; title: string; body: string; badge?: string }[] = [
     { icon: FaCarSide, title: "Local Taxi", body: "Kotdwar city, Sidhbali, Kanvashram sightseeing" },
     { icon: FaRoute, title: "Outstation Taxi", body: "Delhi, Dehradun, Haridwar, Rishikesh, Pauri" },
+    { icon: FaRoute, title: "Kotdwar ↔ Delhi Daily Service", body: "Daily scheduled shared & private cabs — both ways", badge: "Daily" },
     { icon: FaPrayingHands, title: "Char Dham Yatra", body: "Complete 10-day tempo traveller circuit" },
     { icon: FaMountain, title: "Hill Station Tours", body: "Mussoorie, Nainital, Auli, Jim Corbett" },
     { icon: FaUserTie, title: "Corporate & Wedding", body: "Reliable transport for functions & events" },
@@ -206,8 +209,13 @@ function Services() {
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="group rounded-2xl border border-border bg-card p-6 shadow-luxe hover:border-accent transition"
+            className="group relative rounded-2xl border border-border bg-card p-6 shadow-luxe hover:border-accent transition"
           >
+            {s.badge && (
+              <span className="absolute top-4 right-4 rounded-full btn-gold px-2.5 py-1 text-[10px] font-bold uppercase tracking-widest">
+                {s.badge}
+              </span>
+            )}
             <div className="w-12 h-12 grid place-items-center rounded-xl bg-primary text-primary-foreground">
               <s.icon />
             </div>
@@ -330,8 +338,8 @@ const FLEET_CARDS = [
   { name: "Tempo Traveller — Interior", img: tempoInt.url, seats: "14 / 16 / 17+1", ac: "AC", luggage: "Push-back seats", best: "Long-distance comfort" },
   { name: "Sedan (Swift Dzire)", img: sedan.url, seats: "4", ac: "AC", luggage: "3 bags", best: "Kotdwar → Delhi / Dehradun / Pauri" },
   { name: "Force Tempo Traveller — Rear View", img: tempoRear.url, seats: "17+1", ac: "AC", luggage: "Emergency exit fitted", best: "Yatra circuits" },
-  { name: "Innova Crysta", img: "", seats: "6+1", ac: "AC", luggage: "4 bags", best: "Premium family travel", placeholder: true },
-  { name: "Maruti Ertiga", img: "", seats: "6+1", ac: "AC", luggage: "3 bags", best: "Small family / corporate", placeholder: true },
+  { name: "Innova Crysta", img: innova.url, seats: "6+1", ac: "AC", luggage: "4 bags", best: "Premium family travel" },
+  { name: "Maruti Ertiga", img: ertiga.url, seats: "6+1", ac: "AC", luggage: "3 bags", best: "Small family / corporate" },
 ];
 
 function Fleet() {

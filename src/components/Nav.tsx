@@ -1,13 +1,26 @@
 import { Link } from "@tanstack/react-router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { BUSINESS, NAV, waLink } from "@/data/site";
-import logo from "@/assets/logo-tiger.png.asset.json";
+import logo from "@/assets/logo-tiger-new.png.asset.json";
 import { FaWhatsapp, FaPhoneAlt, FaBars, FaTimes } from "react-icons/fa";
 
 export function Nav() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
   return (
-    <header className="sticky top-0 z-40 glass border-b border-border/60">
+    <header
+      className={`sticky top-0 z-40 transition-all duration-300 ${
+        scrolled
+          ? "bg-white/95 backdrop-blur-md shadow-md border-b border-border"
+          : "glass border-b border-border/60"
+      }`}
+    >
       <div className="container-pro flex items-center justify-between h-16 md:h-20">
         <Link to="/" className="flex items-center gap-3">
           <img
