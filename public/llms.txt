@@ -1,0 +1,22 @@
+# Jai Maa Jwalpa Tour and Travel
+
+> Kotdwar-based tour and taxi operator specialising in Char Dham Yatra, Kedarnath & Badrinath tours, and comfortable Uttarakhand travel with sedan, Innova and Tempo Traveller vehicles.
+
+## Pages
+
+- [Home](/): Overview, featured packages, fleet, testimonials and enquiry.
+- [About](/about): Company background, values and traveller-first approach.
+- [Taxi Services](/services): Local, outstation, airport and corporate taxi services from Kotdwar.
+- [Tour Packages](/packages): Char Dham, Do Dham, Kedarnath, Badrinath, Vaishno Devi, Ayodhya, Kathmandu and hill-station packages.
+- [Fleet](/fleet): Sedan, Ertiga, Innova Crysta and 14/16/17+1 seater Tempo Travellers.
+- [Gallery](/gallery): Real fleet and trip photos.
+- [Contact](/contact): Phone, WhatsApp, email, address and enquiry form.
+
+## Popular routes
+
+- [Kotdwar to Delhi Taxi](/routes/kotdwar-to-delhi-taxi-service): One-way & round-trip fares.
+- [Delhi to Kotdwar Taxi](/routes/delhi-to-kotdwar-taxi-service): Airport & railway pickup.
+- [Kotdwar to Dehradun Taxi](/routes/kotdwar-to-dehradun-taxi-service): Sedan & SUV cabs.
+- [Kotdwar to Char Dham Yatra](/routes/kotdwar-to-char-dham-yatra): 10-day itinerary.
+- [Haridwar to Char Dham Yatra](/routes/haridwar-to-char-dham-yatra): Pilgrimage circuit.
+- [Dehradun to Char Dham Yatra](/routes/dehradun-to-char-dham-yatra): Full package.
