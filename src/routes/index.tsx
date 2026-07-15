@@ -194,6 +194,7 @@ function Services() {
   const svcs = [
     { icon: FaCarSide, title: "Local Taxi", body: "Kotdwar city, Sidhbali, Kanvashram sightseeing" },
     { icon: FaRoute, title: "Outstation Taxi", body: "Delhi, Dehradun, Haridwar, Rishikesh, Pauri" },
+    { icon: FaRoute, title: "Kotdwar ↔ Delhi Daily Service", body: "Daily scheduled shared & private cabs — both ways", badge: "Daily" },
     { icon: FaPrayingHands, title: "Char Dham Yatra", body: "Complete 10-day tempo traveller circuit" },
     { icon: FaMountain, title: "Hill Station Tours", body: "Mussoorie, Nainital, Auli, Jim Corbett" },
     { icon: FaUserTie, title: "Corporate & Wedding", body: "Reliable transport for functions & events" },
