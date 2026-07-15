@@ -100,7 +100,14 @@ function Hero() {
             className="absolute inset-0 transition-opacity duration-1000"
             style={{ opacity: i === k ? 0.45 : 0 }}
           >
-            <img src={s.img} alt={s.title} className="w-full h-full object-cover" />
+            <img
+              src={s.img}
+              alt={s.title}
+              width={1920}
+              height={1080}
+              {...(k === 0 ? { fetchPriority: "high" as const } : { loading: "lazy" as const })}
+              className="w-full h-full object-cover"
+            />
           </div>
         ))}
         <div className="absolute inset-0 bg-gradient-to-b from-primary/70 via-primary/40 to-primary/80" />
