@@ -25,7 +25,7 @@ const TABLE = [
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Kotdwar Taxi Services | Local, Outstation, Airport & Tempo Traveller" },
+      { title: "Kotdwar Taxi Services | Local, Outstation & Airport" },
       { name: "description", content: "Full range of Kotdwar taxi services — local, outstation, airport pickup, one-way, round trip, corporate, wedding transport, Tempo Traveller, Innova Crysta." },
       { property: "og:title", content: "Kotdwar Taxi Services — Jai Maa Jwalpa" },
       { property: "og:description", content: "Every kind of Kotdwar taxi service with transparent pricing." },
