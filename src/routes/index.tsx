@@ -209,8 +209,13 @@ function Services() {
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="group rounded-2xl border border-border bg-card p-6 shadow-luxe hover:border-accent transition"
+            className="group relative rounded-2xl border border-border bg-card p-6 shadow-luxe hover:border-accent transition"
           >
+            {s.badge && (
+              <span className="absolute top-4 right-4 rounded-full btn-gold px-2.5 py-1 text-[10px] font-bold uppercase tracking-widest">
+                {s.badge}
+              </span>
+            )}
             <div className="w-12 h-12 grid place-items-center rounded-xl bg-primary text-primary-foreground">
               <s.icon />
             </div>
