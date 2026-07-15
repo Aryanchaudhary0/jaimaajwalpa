@@ -7,6 +7,8 @@ import tempo1 from "@/assets/fleet-tempo-sedan.jpg.asset.json";
 import tempoRear from "@/assets/fleet-tempo-rear.jpg.asset.json";
 import tempoInt from "@/assets/fleet-tempo-interior.jpg.asset.json";
 import sedan from "@/assets/fleet-sedan-front.jpg.asset.json";
+import innova from "@/assets/fleet-innova.jpg.asset.json";
+import ertiga from "@/assets/fleet-ertiga.jpg.asset.json";
 import {
   FaStar, FaWhatsapp, FaPhoneAlt, FaShieldAlt, FaClock, FaMapMarkedAlt, FaUserTie,
   FaCarSide, FaRoute, FaMountain, FaPrayingHands, FaCheckCircle, FaChevronDown,
