@@ -45,11 +45,7 @@ function Gallery() {
                 <img src={im.src} alt={im.alt} loading="lazy" className="w-full h-full object-cover hover:scale-105 transition duration-500" />
               </button>
             ))}
-            {Array.from({ length: 6 }).map((_, k) => (
-              <div key={`p-${k}`} className="aspect-square rounded-2xl bg-secondary/70 border border-dashed border-border grid place-items-center text-xs text-muted-foreground text-center px-2">
-                Trip photo<br />coming soon
-              </div>
-            ))}
+
           </div>
         </div>
       </section>
