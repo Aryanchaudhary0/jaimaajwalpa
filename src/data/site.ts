@@ -200,7 +200,7 @@ export const ROUTES: RouteLanding[] = [
     h1: "Kotdwar Tempo Traveller on Rent",
     metaTitle: "Kotdwar Tempo Traveller on Rent | 14/16/17+1 Seater | Jai Maa Jwalpa",
     metaDescription:
-      "Hire a luxury Tempo Traveller in Kotdwar for weddings, family trips, corporate groups and pilgrimage tours. 14, 16 & 17+1 seater with AC and push-back seats.",
+      "Kotdwar Tempo Traveller on rent — 14, 16 & 17+1 seater luxury vans with AC and push-back seats for weddings, family trips, corporate groups and pilgrimage tours.",
     intro:
       "Hire a Kotdwar Tempo Traveller for weddings, family functions, corporate outings, school picnics and hill-station tours. Our 14, 16 and 17+1 seater luxury Tempo Travellers keep the entire group together in comfort — from pickup to drop.",
     highlights: [
