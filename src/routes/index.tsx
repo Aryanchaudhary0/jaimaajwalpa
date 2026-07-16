@@ -340,14 +340,59 @@ function InclCard({ title, items, tone }: { title: string; items: string[]; tone
   );
 }
 
-const FLEET_CARDS = [
-  { name: "Force Tempo Traveller 17+1", img: tempo1.url, seats: "17+1", ac: "AC", luggage: "Ample roof + rear", best: "Char Dham, wedding, group tours" },
-  { name: "Tempo Traveller — Interior", img: tempoInt.url, seats: "14 / 16 / 17+1", ac: "AC", luggage: "Push-back seats", best: "Long-distance comfort" },
-  { name: "Sedan (Swift Dzire)", img: sedan.url, seats: "4", ac: "AC", luggage: "3 bags", best: "Kotdwar → Delhi / Dehradun / Pauri" },
-  { name: "Force Tempo Traveller — Rear View", img: tempoRear.url, seats: "17+1", ac: "AC", luggage: "Emergency exit fitted", best: "Yatra circuits" },
-  { name: "Innova Crysta", img: innova.url, seats: "6+1", ac: "AC", luggage: "4 bags", best: "Premium family travel" },
-  { name: "Maruti Ertiga", img: ertiga.url, seats: "6+1", ac: "AC", luggage: "3 bags", best: "Small family / corporate" },
+type FleetCard = { name: string; images: { src: string; caption: string }[]; seats: string; ac: string; luggage: string; best: string };
+const FLEET_CARDS: FleetCard[] = [
+  {
+    name: "Force Tempo Traveller (14 / 16 / 17+1)",
+    images: [
+      { src: tempo1.url, caption: "Exterior" },
+      { src: tempoInt.url, caption: "Interior · push-back seats" },
+      { src: tempoRear.url, caption: "Rear view · emergency exit" },
+    ],
+    seats: "14 / 16 / 17+1",
+    ac: "AC",
+    luggage: "Roof + rear · push-back",
+    best: "Char Dham, weddings, group tours",
+  },
+  { name: "Sedan (Swift Dzire)", images: [{ src: sedan.url, caption: "Front" }], seats: "4", ac: "AC", luggage: "3 bags", best: "Kotdwar → Delhi / Dehradun / Pauri" },
+  { name: "Innova Crysta", images: [{ src: innova.url, caption: "Exterior" }], seats: "6+1", ac: "AC", luggage: "4 bags", best: "Premium family travel" },
+  { name: "Maruti Ertiga", images: [{ src: ertiga.url, caption: "Exterior" }], seats: "6+1", ac: "AC", luggage: "3 bags", best: "Small family / corporate" },
 ];
+
+function VehicleCarousel({ images, name }: { images: { src: string; caption: string }[]; name: string }) {
+  const [i, setI] = useState(0);
+  const single = images.length <= 1;
+  return (
+    <div className="relative aspect-[16/10] bg-secondary overflow-hidden">
+      {images.map((im, k) => (
+        <img
+          key={k}
+          src={im.src}
+          alt={`${name} — ${im.caption}`}
+          loading="lazy"
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${i === k ? "opacity-100" : "opacity-0"}`}
+        />
+      ))}
+      {!single && (
+        <>
+          <div className="absolute bottom-2 left-0 right-0 flex justify-center gap-1.5">
+            {images.map((_, k) => (
+              <button
+                key={k}
+                onClick={() => setI(k)}
+                aria-label={`Show ${images[k].caption}`}
+                className={`h-1.5 rounded-full transition-all ${i === k ? "bg-accent w-6" : "bg-white/70 w-2.5"}`}
+              />
+            ))}
+          </div>
+          <span className="absolute top-2 right-2 rounded-full bg-black/55 text-white text-[10px] px-2 py-0.5">
+            {i + 1} / {images.length}
+          </span>
+        </>
+      )}
+    </div>
+  );
+}
 
 function Fleet() {
   return (
@@ -355,15 +400,7 @@ function Fleet() {
       <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
         {FLEET_CARDS.map((v) => (
           <article key={v.name} className="rounded-2xl overflow-hidden border border-border bg-card shadow-luxe">
-            <div className="relative aspect-[16/10] bg-secondary">
-              {v.img ? (
-                <img src={v.img} alt={v.name} className="w-full h-full object-cover" loading="lazy" />
-              ) : (
-                <div className="w-full h-full grid place-items-center text-xs text-muted-foreground text-center px-4">
-                  Real photo coming soon<br /><span className="text-[10px] uppercase tracking-widest">Placeholder</span>
-                </div>
-              )}
-            </div>
+            <VehicleCarousel images={v.images} name={v.name} />
             <div className="p-5">
               <h3 className="font-display text-lg font-semibold">{v.name}</h3>
               <dl className="mt-3 grid grid-cols-2 gap-y-2 text-xs">
@@ -380,6 +417,7 @@ function Fleet() {
     </Section>
   );
 }
+
 
 function WhyUs() {
   const items = [
@@ -469,17 +507,54 @@ function Routes() {
 function DestinationsGrid() {
   return (
     <Section eyebrow="Destinations" title="Every corner of Uttarakhand & beyond">
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
-        {DESTINATIONS.map((d) => (
-          <div key={d} className="group relative aspect-[4/5] rounded-2xl overflow-hidden bg-gradient-to-br from-primary via-primary/80 to-sky/60 text-primary-foreground shadow-luxe">
-            <div className="absolute inset-0 opacity-30 bg-[radial-gradient(circle_at_30%_20%,white,transparent_60%)]" />
-            <div className="relative h-full flex flex-col justify-end p-4">
-              <FaMountain className="text-accent text-xl" />
-              <h3 className="mt-2 font-display text-lg font-semibold">{d}</h3>
-              <p className="text-[10px] uppercase tracking-widest opacity-70">Tour available</p>
+      <div className="relative rounded-3xl overflow-hidden border border-border bg-gradient-to-br from-secondary/60 via-background to-secondary/40 p-6 md:p-10">
+        {/* Stylised Uttarakhand map graphic (decorative background) */}
+        <svg
+          aria-hidden="true"
+          viewBox="0 0 600 400"
+          className="pointer-events-none absolute inset-0 w-full h-full opacity-[0.12] mix-blend-multiply"
+          preserveAspectRatio="xMidYMid slice"
+        >
+          <defs>
+            <linearGradient id="ridge" x1="0" x2="1" y1="0" y2="1">
+              <stop offset="0%" stopColor="oklch(0.32 0.11 250)" />
+              <stop offset="100%" stopColor="oklch(0.58 0.13 165)" />
+            </linearGradient>
+          </defs>
+          <path
+            d="M60,260 L110,210 L150,240 L190,180 L230,220 L270,150 L320,200 L370,140 L420,190 L470,150 L520,210 L540,260 L500,300 L440,310 L380,290 L320,320 L260,300 L200,330 L140,310 L90,320 Z"
+            fill="url(#ridge)"
+            stroke="oklch(0.32 0.11 250)"
+            strokeWidth="1.5"
+          />
+          {/* Destination markers */}
+          {[[120,240],[190,200],[260,180],[320,210],[370,170],[420,205],[470,180],[300,270],[220,280],[380,290],[150,300]].map(([x,y],k)=>(
+            <g key={k}>
+              <circle cx={x} cy={y} r="4" fill="oklch(0.78 0.17 68)" />
+              <circle cx={x} cy={y} r="9" fill="none" stroke="oklch(0.78 0.17 68)" strokeWidth="1" opacity="0.5" />
+            </g>
+          ))}
+        </svg>
+
+        <div className="relative grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
+          {DESTINATIONS.map((d) => (
+            <div key={d} className="group rounded-2xl bg-card/90 backdrop-blur border border-border p-4 shadow-luxe flex flex-col">
+              <div className="flex items-center gap-2">
+                <FaMountain className="text-accent" />
+                <h3 className="font-display text-base font-semibold text-primary">{d}</h3>
+              </div>
+              <span className="mt-2 inline-flex self-start rounded-full bg-emerald/10 text-emerald border border-emerald/30 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-widest">
+                Tour Available
+              </span>
+              <Link
+                to="/packages"
+                className="mt-3 text-xs font-semibold text-primary hover:text-accent inline-flex items-center gap-1"
+              >
+                Explore Package →
+              </Link>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </Section>
   );
@@ -495,15 +570,11 @@ function Gallery() {
             <img src={src} alt="Jai Maa Jwalpa fleet" loading="lazy" className="w-full h-full object-cover hover:scale-105 transition duration-500" />
           </div>
         ))}
-        {Array.from({ length: 4 }).map((_, k) => (
-          <div key={`ph-${k}`} className="aspect-square rounded-2xl bg-secondary/70 border border-dashed border-border grid place-items-center text-xs text-muted-foreground text-center px-2">
-            More real trip photos<br />coming soon
-          </div>
-        ))}
       </div>
     </Section>
   );
 }
+
 
 function Testimonials() {
   return (

@@ -9,6 +9,13 @@ const FLEET = [
 ];
 
 const PACKAGE_LINKS = [
+  "kotdwar-taxi-service",
+  "kotdwar-to-delhi-taxi-service",
+  "delhi-to-kotdwar-taxi-service",
+  "kotdwar-to-dehradun-taxi-service",
+  "kotdwar-to-pauri-taxi-service",
+  "char-dham-tempo-traveller",
+  "kotdwar-tempo-traveller",
   "kotdwar-to-vaishno-devi-temple",
   "dehradun-to-char-dham-yatra",
   "haridwar-to-char-dham-yatra",
@@ -16,11 +23,10 @@ const PACKAGE_LINKS = [
   "delhi-to-char-dham-yatra",
   "kotdwar-to-pauri-garhwal",
   "kotdwar-to-kathmandu",
-  "kotdwar-to-dehradun-taxi-service",
   "kotdwar-to-banaras",
   "kotdwar-to-ayodhya",
-  "kotdwar-to-delhi-taxi-service",
 ];
+
 
 export function Footer() {
   return (
