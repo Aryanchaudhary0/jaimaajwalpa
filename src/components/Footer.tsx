@@ -34,7 +34,7 @@ export function Footer() {
       <div className="container-pro py-16 grid gap-12 md:grid-cols-4">
         <div className="md:col-span-1">
           <div className="flex items-center gap-3">
-            <img src={logo.url} alt="Jai Maa Jwalpa logo" className="w-12 h-12 rounded-full ring-2 ring-accent/60" />
+            <img src={logo} alt="Jai Maa Jwalpa logo" className="w-12 h-12 rounded-full ring-2 ring-accent/60" />
             <div>
               <div className="font-display text-lg font-semibold">Jai Maa Jwalpa</div>
               <div className="text-xs uppercase tracking-widest opacity-70">Tour &amp; Travel</div>

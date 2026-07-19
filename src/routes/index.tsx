@@ -15,9 +15,9 @@ import {
 } from "react-icons/fa";
 
 const HERO_SLIDES = [
-  { img: tempo1.url, title: "Luxury Tempo Traveller for Char Dham", sub: "14 / 16 / 17+1 seater with push-back seats & AC" },
-  { img: tempoInt.url, title: "Comfort you can feel", sub: "Push-back seats, curtains, LED lighting, ample luggage" },
-  { img: sedan.url, title: "Sedan cabs from ₹3,500", sub: "Kotdwar → Dehradun, Pauri, Delhi & more" },
+  { img: tempo1, title: "Luxury Tempo Traveller for Char Dham", sub: "14 / 16 / 17+1 seater with push-back seats & AC" },
+  { img: tempoInt, title: "Comfort you can feel", sub: "Push-back seats, curtains, LED lighting, ample luggage" },
+  { img: sedan, title: "Sedan cabs from ₹3,500", sub: "Kotdwar → Dehradun, Pauri, Delhi & more" },
 ];
 
 const FAQ_JSONLD = {
@@ -345,18 +345,18 @@ const FLEET_CARDS: FleetCard[] = [
   {
     name: "Force Tempo Traveller (14 / 16 / 17+1)",
     images: [
-      { src: tempo1.url, caption: "Exterior" },
-      { src: tempoInt.url, caption: "Interior · push-back seats" },
-      { src: tempoRear.url, caption: "Rear view · emergency exit" },
+      { src: tempo1, caption: "Exterior" },
+      { src: tempoInt, caption: "Interior · push-back seats" },
+      { src: tempoRear, caption: "Rear view · emergency exit" },
     ],
     seats: "14 / 16 / 17+1",
     ac: "AC",
     luggage: "Roof + rear · push-back",
     best: "Char Dham, weddings, group tours",
   },
-  { name: "Sedan (Swift Dzire)", images: [{ src: sedan.url, caption: "Front" }], seats: "4", ac: "AC", luggage: "3 bags", best: "Kotdwar → Delhi / Dehradun / Pauri" },
-  { name: "Innova Crysta", images: [{ src: innova.url, caption: "Exterior" }], seats: "6+1", ac: "AC", luggage: "4 bags", best: "Premium family travel" },
-  { name: "Maruti Ertiga", images: [{ src: ertiga.url, caption: "Exterior" }], seats: "6+1", ac: "AC", luggage: "3 bags", best: "Small family / corporate" },
+  { name: "Sedan (Swift Dzire)", images: [{ src: sedan, caption: "Front" }], seats: "4", ac: "AC", luggage: "3 bags", best: "Kotdwar → Delhi / Dehradun / Pauri" },
+  { name: "Innova Crysta", images: [{ src: innova, caption: "Exterior" }], seats: "6+1", ac: "AC", luggage: "4 bags", best: "Premium family travel" },
+  { name: "Maruti Ertiga", images: [{ src: ertiga, caption: "Exterior" }], seats: "6+1", ac: "AC", luggage: "3 bags", best: "Small family / corporate" },
 ];
 
 function VehicleCarousel({ images, name }: { images: { src: string; caption: string }[]; name: string }) {
@@ -561,7 +561,7 @@ function DestinationsGrid() {
 }
 
 function Gallery() {
-  const imgs = [tempo1.url, tempoInt.url, sedan.url, tempoRear.url];
+  const imgs = [tempo1, tempoInt, sedan, tempoRear];
   return (
     <Section eyebrow="Gallery" title="Real fleet, real journeys">
       <div className="grid grid-cols-2 md:grid-cols-4 gap-3">

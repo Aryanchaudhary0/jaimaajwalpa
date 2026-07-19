@@ -24,7 +24,7 @@ export function Nav() {
       <div className="container-pro flex items-center justify-between h-16 md:h-20">
         <Link to="/" className="flex items-center gap-3">
           <img
-            src={logo.url}
+            src={logo}
             alt="Jai Maa Jwalpa Tour and Travel logo"
             className="w-11 h-11 rounded-full ring-2 ring-accent/60 object-cover bg-primary"
           />

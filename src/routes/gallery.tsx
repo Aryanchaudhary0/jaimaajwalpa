@@ -6,10 +6,10 @@ import tempoInt from "@/assets/fleet-tempo-interior.jpg";
 import sedan from "@/assets/fleet-sedan-front.jpg";
 
 const IMGS = [
-  { src: tempo1.url, alt: "Force Tempo Traveller and sedan fleet" },
-  { src: tempoInt.url, alt: "Luxury Tempo Traveller interior with push-back seats" },
-  { src: tempoRear.url, alt: "Tempo Traveller rear view — emergency exit" },
-  { src: sedan.url, alt: "Swift Dzire sedan for city and outstation" },
+  { src: tempo1, alt: "Force Tempo Traveller and sedan fleet" },
+  { src: tempoInt, alt: "Luxury Tempo Traveller interior with push-back seats" },
+  { src: tempoRear, alt: "Tempo Traveller rear view — emergency exit" },
+  { src: sedan, alt: "Swift Dzire sedan for city and outstation" },
 ];
 
 export const Route = createFileRoute("/gallery")({

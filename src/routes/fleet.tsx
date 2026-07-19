@@ -14,17 +14,17 @@ const FLEET: FleetItem[] = [
   {
     name: "Force Tempo Traveller (14 / 16 / 17+1)",
     images: [
-      { src: tempo1.url, caption: "Exterior" },
-      { src: tempoInt.url, caption: "Interior · push-back seats" },
-      { src: tempoRear.url, caption: "Rear view · emergency exit" },
+      { src: tempo1, caption: "Exterior" },
+      { src: tempoInt, caption: "Interior · push-back seats" },
+      { src: tempoRear, caption: "Rear view · emergency exit" },
     ],
     seats: "14 / 16 / 17+1",
     ac: "AC",
     best: "Char Dham, wedding, group tours",
   },
-  { name: "Sedan — Swift Dzire", images: [{ src: sedan.url, caption: "Front" }], seats: "4", ac: "AC", best: "Kotdwar → Delhi / Dehradun / Pauri" },
-  { name: "Innova Crysta", images: [{ src: innova.url, caption: "Exterior" }], seats: "6+1", ac: "AC", best: "Premium family travel" },
-  { name: "Maruti Ertiga", images: [{ src: ertiga.url, caption: "Exterior" }], seats: "6+1", ac: "AC", best: "Small family / corporate" },
+  { name: "Sedan — Swift Dzire", images: [{ src: sedan, caption: "Front" }], seats: "4", ac: "AC", best: "Kotdwar → Delhi / Dehradun / Pauri" },
+  { name: "Innova Crysta", images: [{ src: innova, caption: "Exterior" }], seats: "6+1", ac: "AC", best: "Premium family travel" },
+  { name: "Maruti Ertiga", images: [{ src: ertiga, caption: "Exterior" }], seats: "6+1", ac: "AC", best: "Small family / corporate" },
 ];
 
 export const Route = createFileRoute("/fleet")({
