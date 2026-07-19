@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { BUSINESS, ROUTES, waLink } from "@/data/site";
-import logo from "@/assets/logo-tiger-new.png.asset.json";
+import logo from "@/assets/logo-tiger-new.png";
 import { FaWhatsapp, FaPhoneAlt, FaMapMarkerAlt, FaEnvelope, FaStar, FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
 
 const FLEET = [

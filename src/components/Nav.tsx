@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { BUSINESS, NAV, waLink } from "@/data/site";
-import logo from "@/assets/logo-tiger-new.png.asset.json";
+import logo from "@/assets/logo-tiger-new.png;
 import { FaWhatsapp, FaPhoneAlt, FaBars, FaTimes } from "react-icons/fa";
 
 export function Nav() {
