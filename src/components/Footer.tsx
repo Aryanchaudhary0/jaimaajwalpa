@@ -25,6 +25,9 @@ const PACKAGE_LINKS = [
   "kotdwar-to-kathmandu",
   "kotdwar-to-banaras",
   "kotdwar-to-ayodhya",
+  "haridwar-to-haridwar",
+  "rishikesh-to-rishikesh",
+  "dehradun-to-dehradun",
 ];
 
 
