@@ -311,6 +311,50 @@ export const ROUTES: RouteLanding[] = [
     keywords: ["kotdwar to char dham yatra", "char dham from kotdwar"],
   },
   {
+  slug: "kotdwar-to-kedarnath-package",
+  h1: "Kedarnath Dham Package from Kotdwar",
+  metaTitle: "Kedarnath Dham Package | ₹7,500 Per Person — Jai Maa Jwalpa",
+  metaDescription:
+    "Kedarnath Dham package from Kotdwar — 4 Days / 3 Nights at ₹7,500 per person including cab, hotel and food.",
+  intro:
+    "Complete your Kedarnath Dham darshan with our all-inclusive 4-day package from Kotdwar — covering transport, hotel stay and meals in one simple price.",
+  highlights: [
+    "4 Days / 3 Nights complete Kedarnath Dham yatra",
+    "Cab, hotel stay and food all included",
+    "Experienced yatra driver for hill route",
+    "Pickup from your Kotdwar address",
+  ],
+  body: [
+    "This 1 Dhaam package covers the full Kedarnath darshan circuit from Kotdwar, including the trek support from Gaurikund/Sonprayag and comfortable hotel stays en route.",
+    "Package includes cab, hotel accommodation and food (breakfast & dinner) for the full 3 nights. Personal expenses and pony/palki/helicopter charges are not included.",
+    "Featured price: ₹7,500 per person for the standard sharing package. Confirm exact dates and group size on enquiry.",
+  ],
+  price: "₹7,500 per person (4D/3N)",
+  duration: "4 Days / 3 Nights",
+  keywords: ["kedarnath package from kotdwar", "kedarnath dham tour", "1 dhaam kedarnath package"],
+},
+{
+  slug: "kotdwar-to-lansdowne-taxi-service",
+  h1: "Kotdwar to Lansdowne, Tarkeshwar & Gumkhal Sightseeing",
+  metaTitle: "Kotdwar to Lansdowne Taxi | Tarkeshwar & Gumkhal Local Sightseeing",
+  metaDescription:
+    "Kotdwar to Lansdowne taxi service covering Tarkeshwar Mahadev and Gumkhal local sightseeing. Comfortable cab with experienced local drivers.",
+  intro:
+    "Explore Lansdowne, Tarkeshwar Mahadev Temple and Gumkhal on a comfortable local sightseeing trip from Kotdwar — perfect for a day trip or short weekend getaway.",
+  highlights: [
+    "Kotdwar → Lansdowne → Tarkeshwar → Gumkhal circuit",
+    "Local sightseeing with flexible halts",
+    "Sedan, SUV and Tempo Traveller options",
+    "Same-day return or overnight stay options",
+  ],
+  body: [
+    "This short hill circuit combines the colonial charm of Lansdowne, the peaceful Tarkeshwar Mahadev Temple set in dense forest, and the scenic viewpoints around Gumkhal — all easily covered from Kotdwar in a single day or relaxed overnight trip.",
+    "Our local drivers know the best photo stops and temple darshan timings along the route, making this ideal for families, small groups and weekend travellers.",
+    "Fare depends on vehicle type and whether you choose a same-day return or overnight stay. Confirm on enquiry.",
+  ],
+  keywords: ["kotdwar to lansdowne taxi", "tarkeshwar mahadev kotdwar", "gumkhal sightseeing"],
+},
+  {
     slug: "delhi-to-char-dham-yatra",
     h1: "Delhi to Char Dham Yatra Package",
     metaTitle: "Delhi to Char Dham Yatra Package | 10 Days — Jai Maa Jwalpa",
@@ -455,10 +499,18 @@ export const PACKAGES: Pkg[] = [
     incl: "Transport + hotel arrangements",
     slug: "kotdwar-to-char-dham-yatra",
   },
+  {
+  title: "Kedarnath Dham Package (1 Dhaam)",
+  duration: "4 Days / 3 Nights",
+  price: "₹7,500 / person",
+  covers: "Kedarnath Dham darshan",
+  incl: "Cab · Hotel · Food included",
+  slug: "kotdwar-to-kedarnath-package",
+},
 ];
 
 export const DESTINATIONS = [
-  "Kedarnath", "Badrinath", "Gangotri", "Yamunotri", "Haridwar",
+  "Kedarnath", "Badrinath", "Gangotri", "Yamunotri", "Haridwar", "Lansdowne",
   "Rishikesh", "Mussoorie", "Nainital", "Auli", "Jim Corbett",
   "Char Dham", "Banaras", "Vaishno Devi", "Ayodhya", "Dehradun",
 ] as const;
