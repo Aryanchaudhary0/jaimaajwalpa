@@ -29,9 +29,9 @@ export const Route = createFileRoute("/services")({
       { name: "description", content: "Full range of Kotdwar taxi services — local, outstation, airport pickup, one-way, round trip, corporate, wedding transport, Tempo Traveller, Innova Crysta." },
       { property: "og:title", content: "Kotdwar Taxi Services — Jai Maa Jwalpa" },
       { property: "og:description", content: "Every kind of Kotdwar taxi service with transparent pricing." },
-      { property: "og:url", content: "/services" },
+      { property: "og:url", content: "https://jaimaajwalpa.in/services" },
     ],
-    links: [{ rel: "canonical", href: "/services" }],
+links: [{ rel: "canonical", href: "https://jaimaajwalpa.in/services" }],
   }),
   component: Services,
 });

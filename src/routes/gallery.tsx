@@ -19,9 +19,9 @@ export const Route = createFileRoute("/gallery")({
       { name: "description", content: "Real photos of our fleet, Tempo Traveller interiors and traveller journeys. Kotdwar-based tour operator." },
       { property: "og:title", content: "Gallery — Jai Maa Jwalpa" },
       { property: "og:description", content: "Fleet & journey photos." },
-      { property: "og:url", content: "/gallery" },
+    { property: "og:url", content: "https://jaimaajwalpa.in/gallery" },
     ],
-    links: [{ rel: "canonical", href: "/gallery" }],
+links: [{ rel: "canonical", href: "https://jaimaajwalpa.in/gallery" }],
   }),
   component: Gallery,
 });

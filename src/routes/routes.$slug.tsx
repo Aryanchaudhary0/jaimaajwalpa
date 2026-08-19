@@ -3,6 +3,8 @@ import { ROUTES, BUSINESS, waLink } from "@/data/site";
 import { EnquiryForm } from "@/components/EnquiryForm";
 import { FaWhatsapp, FaPhoneAlt, FaCheckCircle, FaMapMarkedAlt, FaClock, FaRupeeSign } from "react-icons/fa";
 
+const BASE_URL = "https://jaimaajwalpa.in";
+
 export const Route = createFileRoute("/routes/$slug")({
   loader: ({ params }) => {
     const r = ROUTES.find((x) => x.slug === params.slug);
@@ -19,10 +21,10 @@ export const Route = createFileRoute("/routes/$slug")({
         { name: "keywords", content: r.keywords.join(", ") },
         { property: "og:title", content: r.metaTitle },
         { property: "og:description", content: r.metaDescription },
-        { property: "og:url", content: `/routes/${params.slug}` },
+        { property: "og:url", content: `${BASE_URL}/routes/${params.slug}` },
         { property: "og:type", content: "article" },
       ],
-      links: [{ rel: "canonical", href: `/routes/${params.slug}` }],
+      links: [{ rel: "canonical", href: `${BASE_URL}/routes/${params.slug}` }],
       scripts: [
         {
           type: "application/ld+json",
@@ -73,7 +75,7 @@ function RouteLandingPage() {
           )}
 
           <div className="mt-8 flex flex-wrap gap-3">
-            <a
+            
               href={waLink(`Hello Jai Maa Jwalpa, I'm interested in: ${r.h1}. Please share details.`)}
               target="_blank"
               rel="noopener"

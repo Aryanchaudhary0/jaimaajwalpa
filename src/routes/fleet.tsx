@@ -34,9 +34,9 @@ export const Route = createFileRoute("/fleet")({
       { name: "description", content: "Clean, well-maintained fleet: Dzire sedan, Ertiga, Innova Crysta and 14/16/17+1 seater luxury Tempo Travellers with AC and push-back seats." },
       { property: "og:title", content: "Our Fleet — Jai Maa Jwalpa" },
       { property: "og:description", content: "Sedan, Innova Crysta & Tempo Traveller for Char Dham & Uttarakhand." },
-      { property: "og:url", content: "/fleet" },
+     { property: "og:url", content: "https://jaimaajwalpa.in/fleet" },
     ],
-    links: [{ rel: "canonical", href: "/fleet" }],
+links: [{ rel: "canonical", href: "https://jaimaajwalpa.in/fleet" }],
   }),
   component: Fleet,
 });

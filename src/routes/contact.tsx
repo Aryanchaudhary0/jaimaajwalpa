@@ -10,9 +10,9 @@ export const Route = createFileRoute("/contact")({
       { name: "description", content: "Call, WhatsApp or email Jai Maa Jwalpa Tour and Travel, Kotdwar. Address: Dhanesh Farm, Near Civil Court, Jhanda Chowk, Kotdwar, Uttarakhand 246149." },
       { property: "og:title", content: "Contact — Jai Maa Jwalpa" },
       { property: "og:description", content: "Book your Uttarakhand journey. 24×7 support." },
-      { property: "og:url", content: "/contact" },
+{ property: "og:url", content: "https://jaimaajwalpa.in/contact" },
     ],
-    links: [{ rel: "canonical", href: "/contact" }],
+links: [{ rel: "canonical", href: "https://jaimaajwalpa.in/contact" }],
   }),
   component: Contact,
 });

@@ -54,9 +54,9 @@ export const Route = createFileRoute("/")({
       { name: "description", content: "Book Kotdwar taxi service & Char Dham Yatra packages. Sedan, Innova & Tempo Traveller. 4.9★ on Google." },
       { property: "og:title", content: "Kotdwar Taxi & Char Dham Yatra | Jai Maa Jwalpa" },
       { property: "og:description", content: "Trusted Kotdwar tour operator. Char Dham from ₹19,500." },
-      { property: "og:url", content: "https://jaimaajwalpa.lovable.app/" },
+      { property: "og:url", content: "https://jaimaajwalpa.in/" },
     ],
-    links: [{ rel: "canonical", href: "https://jaimaajwalpa.lovable.app/" }],
+    links: [{ rel: "canonical", href: "https://jaimaajwalpa.in/" }],
     scripts: [
       { type: "application/ld+json", children: JSON.stringify(FAQ_JSONLD) },
       { type: "application/ld+json", children: JSON.stringify(REVIEW_JSONLD) },
@@ -64,7 +64,6 @@ export const Route = createFileRoute("/")({
   }),
   component: Home,
 });
-
 function Home() {
   return (
     <>

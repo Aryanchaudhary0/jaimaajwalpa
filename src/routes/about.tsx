@@ -9,9 +9,9 @@ export const Route = createFileRoute("/about")({
       { name: "description", content: "Kotdwar-based tour operator for Char Dham Yatra, Kedarnath & Badrinath tours, and comfortable Uttarakhand taxi service." },
       { property: "og:title", content: "About — Jai Maa Jwalpa Tour and Travel" },
       { property: "og:description", content: "Trusted Kotdwar-based Char Dham & Uttarakhand tour operator." },
-      { property: "og:url", content: "/about" },
+      { property: "og:url", content: "https://jaimaajwalpa.in/about" },
     ],
-    links: [{ rel: "canonical", href: "/about" }],
+    links: [{ rel: "canonical", href: "https://jaimaajwalpa.in/about" }],
   }),
   component: About,
 });

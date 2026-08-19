@@ -9,7 +9,7 @@ export const BUSINESS = {
   email: "taxikotdwar@gmail.com",
   address: "Dhanesh Farm, Near Civil Court, Jhanda Chowk, Kotdwar, Uttarakhand 246149",
   plusCode: "PGW9+4W Kotdwar, Uttarakhand",
-  domain: "jaimaajwalpataxiservices.com",
+  domain: "jaimaajwalpa.in",
   rating: 4.9,
   reviewCount: 16,
   googleUrl: "https://www.google.com/search?q=Jai+Maa+Jwalpa+Tour+and+Travel+Kotdwar",

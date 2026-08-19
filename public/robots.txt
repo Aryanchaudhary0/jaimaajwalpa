@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://jaimaajwalpa.lovable.app/sitemap.xml
+Sitemap: https://jaimaajwalpa.in/sitemap.xml

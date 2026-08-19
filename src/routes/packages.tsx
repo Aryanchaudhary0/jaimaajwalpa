@@ -16,9 +16,9 @@ export const Route = createFileRoute("/packages")({
       { name: "description", content: "Explore Char Dham, Do Dham, Kedarnath, Badrinath, Vaishno Devi, Ayodhya, Kathmandu and hill-station tour packages from Kotdwar." },
       { property: "og:title", content: "Tour Packages — Jai Maa Jwalpa" },
       { property: "og:description", content: "Uttarakhand tour packages from a trusted Kotdwar operator." },
-      { property: "og:url", content: "/packages" },
+      { property: "og:url", content: "https://jaimaajwalpa.in/packages" },
     ],
-    links: [{ rel: "canonical", href: "/packages" }],
+links: [{ rel: "canonical", href: "https://jaimaajwalpa.in/packages" }],
   }),
   component: Packages,
 });
