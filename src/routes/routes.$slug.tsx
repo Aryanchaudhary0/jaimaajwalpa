@@ -74,19 +74,23 @@ function RouteLandingPage() {
             </div>
           )}
 
-          <div className="mt-8 flex flex-wrap gap-3">
-            
-              href={waLink(`Hello Jai Maa Jwalpa, I'm interested in: ${r.h1}. Please share details.`)}
-              target="_blank"
-              rel="noopener"
-              className="btn-gold inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold"
-            >
-              <FaWhatsapp /> WhatsApp for Quote
-            </a>
-            <a href={`tel:${BUSINESS.phonePrimaryDigits}`} className="inline-flex items-center gap-2 rounded-full glass-dark border border-white/30 px-6 py-3 text-sm font-semibold">
-              <FaPhoneAlt /> {BUSINESS.phonePrimary}
-            </a>
-          </div>
+     <div className="mt-8 flex flex-wrap gap-3">
+  <a
+    href={waLink(`Hello Jai Maa Jwalpa, I'm interested in: ${r.h1}. Please share details.`)}
+    target="_blank"
+    rel="noopener"
+    className="btn-gold inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold"
+  >
+    <FaWhatsapp /> WhatsApp for Quote
+  </a>
+
+  <a
+    href={`tel:${BUSINESS.phonePrimaryDigits}`}
+    className="inline-flex items-center gap-2 rounded-full glass-dark border border-white/30 px-6 py-3 text-sm font-semibold"
+  >
+    <FaPhoneAlt /> {BUSINESS.phonePrimary}
+  </a>
+</div>
         </div>
       </section>
 
