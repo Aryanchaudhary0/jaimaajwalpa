@@ -15,6 +15,8 @@ export const Route = createFileRoute("/sitemap.xml")({
           { p: "/fleet", pri: "0.8" },
           { p: "/gallery", pri: "0.6" },
           { p: "/contact", pri: "0.7" },
+          { p: "/legal/privacy", pri: "0.3" },
+{ p: "/legal/terms", pri: "0.3" },
           ...ROUTES.map((r) => ({ p: `/routes/${r.slug}`, pri: "0.85" })),
         ];
         const urls = paths.map(
