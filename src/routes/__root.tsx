@@ -14,6 +14,10 @@ import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { FloatingActions } from "@/components/FloatingActions";
 import { BUSINESS } from "@/data/site";
+import ogImage from "@/assets/fleet-tempo-sedan.jpg";
+
+const SITE_URL = `https://${BUSINESS.domain}`;
+const OG_IMAGE_URL = `${SITE_URL}${ogImage}`;
 
 function NotFoundComponent() {
   return (
@@ -25,7 +29,10 @@ function NotFoundComponent() {
           The page you're looking for doesn't exist or has been moved.
         </p>
         <div className="mt-6">
-          <a href="/" className="btn-gold inline-flex items-center justify-center rounded-full px-5 py-2.5 text-sm font-semibold">
+          <a
+            href="/"
+            className="btn-gold inline-flex items-center justify-center rounded-full px-5 py-2.5 text-sm font-semibold"
+          >
             Go home
           </a>
         </div>
@@ -34,25 +41,47 @@ function NotFoundComponent() {
   );
 }
 
-function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
+function ErrorComponent({
+  error,
+  reset,
+}: {
+  error: Error;
+  reset: () => void;
+}) {
   console.error(error);
   const router = useRouter();
+
   useEffect(() => {
-    reportLovableError(error, { boundary: "tanstack_root_error_component" });
+    reportLovableError(error, {
+      boundary: "tanstack_root_error_component",
+    });
   }, [error]);
+
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
-        <h1 className="text-xl font-semibold tracking-tight">This page didn't load</h1>
-        <p className="mt-2 text-sm text-muted-foreground">Something went wrong. Try again or head back home.</p>
+        <h1 className="text-xl font-semibold tracking-tight">
+          This page didn't load
+        </h1>
+        <p className="mt-2 text-sm text-muted-foreground">
+          Something went wrong. Try again or head back home.
+        </p>
         <div className="mt-6 flex flex-wrap justify-center gap-2">
           <button
-            onClick={() => { router.invalidate(); reset(); }}
+            onClick={() => {
+              router.invalidate();
+              reset();
+            }}
             className="btn-gold rounded-full px-5 py-2.5 text-sm font-semibold"
           >
             Try again
           </button>
-          <a href="/" className="rounded-full border border-input px-5 py-2.5 text-sm font-semibold">Go home</a>
+          <a
+            href="/"
+            className="rounded-full border border-input px-5 py-2.5 text-sm font-semibold"
+          >
+            Go home
+          </a>
         </div>
       </div>
     </div>
@@ -63,10 +92,10 @@ const LOCAL_BUSINESS_JSONLD = {
   "@context": "https://schema.org",
   "@type": ["TravelAgency", "TaxiService", "LocalBusiness"],
   name: BUSINESS.name,
-  image: "https://jaimaajwalpataxiservices.com/og.jpg",
+  image: OG_IMAGE_URL,
   telephone: BUSINESS.phonePrimary,
   email: BUSINESS.email,
-  url: `https://${BUSINESS.domain}`,
+  url: SITE_URL,
   priceRange: "₹₹",
   address: {
     "@type": "PostalAddress",
@@ -76,7 +105,15 @@ const LOCAL_BUSINESS_JSONLD = {
     postalCode: "246149",
     addressCountry: "IN",
   },
-  areaServed: ["Kotdwar", "Delhi", "Dehradun", "Haridwar", "Rishikesh", "Pauri Garhwal", "Char Dham"],
+  areaServed: [
+    "Kotdwar",
+    "Delhi",
+    "Dehradun",
+    "Haridwar",
+    "Rishikesh",
+    "Pauri Garhwal",
+    "Char Dham",
+  ],
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: BUSINESS.rating,
@@ -85,7 +122,9 @@ const LOCAL_BUSINESS_JSONLD = {
   openingHours: "Mo-Su 00:00-23:59",
 };
 
-export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
+export const Route = createRootRouteWithContext<{
+  queryClient: QueryClient;
+}>()({
   head: () => ({
     meta: [
       { charSet: "utf-8" },
@@ -98,21 +137,47 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { name: "author", content: "Jai Maa Jwalpa Tour and Travel" },
       { name: "theme-color", content: "#1a2b6d" },
-      { property: "og:site_name", content: "Jai Maa Jwalpa Tour and Travel" },
-      { property: "og:title", content: "Jai Maa Jwalpa | Kotdwar Taxi & Char Dham" },
-      { property: "og:description", content: "Kotdwar tour operator. Char Dham from ₹19,500. Tempo Travellers, sedans & SUVs." },
+      {
+        property: "og:site_name",
+        content: "Jai Maa Jwalpa Tour and Travel",
+      },
+      {
+        property: "og:title",
+        content: "Jai Maa Jwalpa | Kotdwar Taxi & Char Dham",
+      },
+      {
+        property: "og:description",
+        content:
+          "Kotdwar tour operator. Char Dham from ₹19,500. Tempo Travellers, sedans & SUVs.",
+      },
       { property: "og:type", content: "website" },
+      { property: "og:image", content: OG_IMAGE_URL },
+      {
+        property: "og:image:alt",
+        content: "Jai Maa Jwalpa Tempo Traveller for Uttarakhand travel",
+      },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: OG_IMAGE_URL },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
       { rel: "icon", href: "/favicon.png", type: "image/png" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700&display=swap" },
+      {
+        rel: "preconnect",
+        href: "https://fonts.gstatic.com",
+        crossOrigin: "anonymous",
+      },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700&display=swap",
+      },
     ],
     scripts: [
-      { type: "application/ld+json", children: JSON.stringify(LOCAL_BUSINESS_JSONLD) },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(LOCAL_BUSINESS_JSONLD),
+      },
     ],
   }),
   shellComponent: RootShell,
@@ -124,7 +189,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 function RootShell({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <head><HeadContent /></head>
+      <head>
+        <HeadContent />
+      </head>
       <body>
         {children}
         <Scripts />
@@ -135,6 +202,7 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+
   return (
     <QueryClientProvider client={queryClient}>
       <Nav />

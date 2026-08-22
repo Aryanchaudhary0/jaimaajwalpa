@@ -118,7 +118,7 @@ function Hero() {
             <FaMapMarkedAlt className="text-accent" /> Kotdwar · Uttarakhand
           </span>
           <h1 className="mt-6 font-display text-4xl md:text-6xl lg:text-7xl font-semibold leading-[1.05] max-w-4xl">
-            Explore Uttarakhand with{" "}
+           Reliable Taxi Service in Kotdwar with{" "}
             <span className="text-gold-gradient">Comfort, Safety &amp; Trust</span>
           </h1>
           <p className="mt-6 max-w-2xl text-base md:text-lg text-white/85 leading-relaxed">
