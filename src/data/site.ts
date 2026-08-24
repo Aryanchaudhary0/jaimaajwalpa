@@ -73,6 +73,48 @@ export const ROUTES: RouteLanding[] = [
     ],
   },
   {
+    slug: "kotdwar-to-haridwar-taxi-service",
+    h1: "Kotdwar to Haridwar Taxi Service",
+    metaTitle: "Kotdwar to Haridwar Taxi | One-Way & Round Trip Cab | Jai Maa Jwalpa",
+    metaDescription:
+      "Book a Kotdwar to Haridwar taxi for railway station, Ganga Aarti, hotel or pilgrimage travel. Sedan, SUV and Tempo Traveller options with local drivers.",
+    intro:
+      "Travel comfortably from Kotdwar to Haridwar with a private cab from Jai Maa Jwalpa Tour and Travel. We arrange one-way, round-trip and customised pilgrim travel with pickup from your Kotdwar address.",
+    highlights: [
+      "Pickup from Kotdwar homes, hotels and railway station",
+      "Drop at Haridwar Railway Station, hotels, ghats or temples",
+      "Sedan, Innova Crysta and Tempo Traveller options",
+      "One-way, return and onward Char Dham travel available",
+    ],
+    body: [
+      "Haridwar is a popular gateway for Ganga Aarti, temple visits and Char Dham departures. A private cab offers door-to-door comfort for families, senior citizens and travellers carrying luggage.",
+      "Choose a sedan for couples and small families, an Innova Crysta for extra comfort and luggage, or a Tempo Traveller for larger groups. We confirm the vehicle, pickup time and fare before booking.",
+      "Fares depend on travel date, vehicle type, pickup point and whether you need a return journey or onward travel. Contact us by call or WhatsApp for a confirmed quote.",
+    ],
+    keywords: ["kotdwar to haridwar taxi", "kotdwar to haridwar cab", "haridwar taxi from kotdwar"],
+  },
+  {
+    slug: "kotdwar-to-rishikesh-taxi-service",
+    h1: "Kotdwar to Rishikesh Taxi Service",
+    metaTitle: "Kotdwar to Rishikesh Taxi | Cab Booking | Jai Maa Jwalpa",
+    metaDescription:
+      "Book a Kotdwar to Rishikesh taxi for yoga, rafting, railway station or onward travel. Comfortable sedan, SUV and Tempo Traveller cabs from a local Kotdwar operator.",
+    intro:
+      "Book a comfortable Kotdwar to Rishikesh cab with Jai Maa Jwalpa Tour and Travel. We provide private taxi options for families, pilgrims, students and groups travelling to Rishikesh or onward into Uttarakhand.",
+    highlights: [
+      "Door-to-door pickup anywhere in Kotdwar",
+      "Drop at Tapovan, Lakshman Jhula, hotels, camps or railway station",
+      "Sedan, Innova Crysta and Tempo Traveller options",
+      "One-way, round-trip and onward journey planning available",
+    ],
+    body: [
+      "Rishikesh is a common destination for yoga retreats, rafting, Ganga Aarti, railway connections and pilgrimage travel. A private cab lets you travel at your own pace with convenient pickup and luggage space.",
+      "Our local drivers can coordinate pickups from your home, hotel or Kotdwar Railway Station and drop you at your selected Rishikesh destination.",
+      "Share your travel date, passenger count and exact pickup/drop locations for a confirmed fare.",
+    ],
+    keywords: ["kotdwar to rishikesh taxi", "kotdwar to rishikesh cab", "rishikesh taxi from kotdwar"],
+  },
+  {
     slug: "delhi-to-kotdwar-taxi-service",
     h1: "Delhi to Kotdwar Taxi Service",
     metaTitle: "Delhi to Kotdwar Taxi Service | One-Way & Round Trip Cabs",
