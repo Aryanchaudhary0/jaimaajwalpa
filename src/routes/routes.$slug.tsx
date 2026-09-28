@@ -73,6 +73,33 @@ export const Route = createFileRoute("/routes/$slug")({
             description: route.metaDescription,
           }),
         },
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: BASE_URL,
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "Routes & Packages",
+                item: `${BASE_URL}/packages`,
+              },
+              {
+                "@type": "ListItem",
+                position: 3,
+                name: route.h1,
+                item: pageUrl,
+              },
+            ],
+          }),
+        },
       ],
     };
   },
@@ -120,7 +147,7 @@ function RouteLandingPage() {
           )}
 
           <div className="mt-8 flex flex-wrap gap-3">
-            <a
+            
               href={waLink(
                 `Hello Jai Maa Jwalpa, I'm interested in: ${route.h1}. Please share details.`,
               )}
@@ -131,7 +158,7 @@ function RouteLandingPage() {
               <FaWhatsapp /> WhatsApp for Quote
             </a>
 
-            <a
+            
               href={`tel:${BUSINESS.phonePrimaryDigits}`}
               className="inline-flex items-center gap-2 rounded-full border border-white/30 glass-dark px-6 py-3 text-sm font-semibold"
             >
@@ -151,10 +178,7 @@ function RouteLandingPage() {
 
               <ul className="mt-4 grid gap-3 text-sm sm:grid-cols-2">
                 {route.highlights.map((highlight) => (
-                  <li
-                    key={highlight}
-                    className="flex items-start gap-2"
-                  >
+                  <li key={highlight} className="flex items-start gap-2">
                     <FaCheckCircle className="mt-1 shrink-0 text-emerald" />
                     <span>{highlight}</span>
                   </li>
