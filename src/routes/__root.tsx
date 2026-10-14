@@ -136,6 +136,10 @@ export const Route = createRootRouteWithContext<{
           "Kotdwar taxi service & Char Dham Yatra packages. Sedan, Innova & Tempo Traveller. 4.9★ on Google.",
       },
       { name: "author", content: "Jai Maa Jwalpa Tour and Travel" },
+      {
+        name: "google-site-verification",
+        content: "bm5Vy9gwVvSVPDdXo1-eER5BQ9M9rYQnGmEaJ4V-4Fg",
+      },
       { name: "theme-color", content: "#1a2b6d" },
       {
         property: "og:site_name",
