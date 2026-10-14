@@ -70,7 +70,7 @@ export const Route = createFileRoute("/routes/$slug")({
               ? {
                   offers: {
                     "@type": "Offer",
-                    price: route.price.replace(/[^\d]/g, "") || undefined,
+                    price: route.price.match(/₹\s?([\d,]+)/)?.[1]?.replace(/,/g, ""),
                     priceCurrency: "INR",
                     url: pageUrl,
                   },
