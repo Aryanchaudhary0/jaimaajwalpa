@@ -1,9 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import tempo1 from "@/assets/fleet-tempo-sedan.jpg";
-import tempoRear from "@/assets/fleet-tempo-rear.jpg";
-import tempoInt from "@/assets/fleet-tempo-interior.jpg";
-import sedan from "@/assets/fleet-sedan-front.jpg";
+import tempo1 from "@/assets/fleet-tempo-sedan.webp";
+import tempoRear from "@/assets/fleet-tempo-rear.webp";
+import tempoInt from "@/assets/fleet-tempo-interior.webp";
+import sedan from "@/assets/fleet-sedan-front.webp";
 
 const IMGS = [
   { src: tempo1, alt: "Force Tempo Traveller and sedan fleet" },

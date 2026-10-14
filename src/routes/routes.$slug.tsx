@@ -9,7 +9,7 @@ import {
   FaClock,
   FaRupeeSign,
 } from "react-icons/fa";
-import ogImage from "@/assets/fleet-tempo-sedan.jpg";
+import ogImage from "@/assets/fleet-tempo-sedan.webp";
 
 const BASE_URL = "https://jaimaajwalpa.in";
 const OG_IMAGE_URL = `${BASE_URL}${ogImage}`;
