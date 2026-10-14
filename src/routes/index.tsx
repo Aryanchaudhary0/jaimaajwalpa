@@ -3,12 +3,12 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { BUSINESS, PACKAGES, DESTINATIONS, TESTIMONIALS, FAQS, ROUTES, waLink } from "@/data/site";
 import { EnquiryForm } from "@/components/EnquiryForm";
-import tempo1 from "@/assets/fleet-tempo-sedan.jpg";
-import tempoRear from "@/assets/fleet-tempo-rear.jpg";
-import tempoInt from "@/assets/fleet-tempo-interior.jpg";
-import sedan from "@/assets/fleet-sedan-front.jpg";
-import innova from "@/assets/fleet-innova.jpg";
-import ertiga from "@/assets/fleet-ertiga.jpg";
+import tempo1 from "@/assets/fleet-tempo-sedan.webp";
+import tempoRear from "@/assets/fleet-tempo-rear.webp";
+import tempoInt from "@/assets/fleet-tempo-interior.webp";
+import sedan from "@/assets/fleet-sedan-front.webp";
+import innova from "@/assets/fleet-innova.webp";
+import ertiga from "@/assets/fleet-ertiga.webp";
 import {
   FaStar, FaWhatsapp, FaPhoneAlt, FaShieldAlt, FaClock, FaMapMarkedAlt, FaUserTie,
   FaCarSide, FaRoute, FaMountain, FaPrayingHands, FaCheckCircle, FaChevronDown,

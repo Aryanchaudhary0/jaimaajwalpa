@@ -14,7 +14,7 @@ import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { FloatingActions } from "@/components/FloatingActions";
 import { BUSINESS } from "@/data/site";
-import ogImage from "@/assets/fleet-tempo-sedan.jpg";
+import ogImage from "@/assets/fleet-tempo-sedan.webp";
 
 const SITE_URL = `https://${BUSINESS.domain}`;
 const OG_IMAGE_URL = `${SITE_URL}${ogImage}`;
