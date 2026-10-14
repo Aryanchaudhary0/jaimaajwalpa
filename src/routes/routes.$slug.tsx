@@ -61,16 +61,48 @@ export const Route = createFileRoute("/routes/$slug")({
           type: "application/ld+json",
           children: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Service",
+            "@type": "TaxiService",
+            name: route.h1,
             serviceType: route.h1,
+            url: pageUrl,
+            description: route.metaDescription,
+            ...(route.price
+              ? {
+                  offers: {
+                    "@type": "Offer",
+                    price: route.price.match(/₹\s?([\d,]+)/)?.[1]?.replace(/,/g, ""),
+                    priceCurrency: "INR",
+                    url: pageUrl,
+                  },
+                }
+              : {}),
             provider: {
               "@type": "TravelAgency",
               name: BUSINESS.name,
+              url: BASE_URL,
               telephone: BUSINESS.phonePrimary,
-              address: BUSINESS.address,
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "Dhanesh Farm, Near Civil Court, Jhanda Chowk",
+                addressLocality: "Kotdwar",
+                addressRegion: "Uttarakhand",
+                postalCode: "246149",
+                addressCountry: "IN",
+              },
             },
             areaServed: "Uttarakhand, India",
-            description: route.metaDescription,
+          }),
+        },
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: `${BASE_URL}/` },
+              { "@type": "ListItem", position: 2, name: "Taxi Services", item: `${BASE_URL}/services` },
+              { "@type": "ListItem", position: 3, name: route.h1, item: pageUrl },
+            ],
           }),
         },
       ],
